@@ -1,0 +1,94 @@
+body
+{
+    background-color: var(--dark-background);
+    color: var(--eggshell);
+}
+
+.simple-list.simple-list-container
+{
+    background-color: var(--rich-black-fogra-29);
+}
+
+.simple-list > .simple-list-title
+{
+    background-color: var(--prussian-blue);
+}
+
+.simple-list > .simple-list-ul
+{
+    border: 1px solid;
+    
+}
+
+.simple-list > .hide
+{
+    display: none;    
+}
+
+
+.simple-list > .simple-list-ul > li
+{
+    background-color: var(--rich-black-fogra-29);
+    border-bottom: solid 0.5px;
+}
+
+
+.simple-list > .simple-list-ul > li:last-child
+{
+    border-bottom: none;
+}
+
+.simple-list > .simple-list-ul > li.selected
+{
+    background-color: var(--black-coral);
+}
+
+.btn
+{
+    color: var(--eggshell);
+    background-color: var(--black-coral);
+    transition: background-color 1s ease;
+    box-shadow: 0 3px 0 -2.5px;
+}
+
+.btn:hover
+{
+    color: var(--black-coral);
+    background-color: var(--eggshell);
+    box-shadow: 0 3px 5px -2px inset;
+}
+
+
+.btn.disabled
+{
+    color: var(--black-coral);
+    background-color: var(--eggshell);
+    box-shadow: 0 3px 5px -2px inset;
+}
+
+.loader
+{
+  background-color: var(--rich-black-fogra-29-95);
+
+}
+
+.login
+{background-color: var(--rich-black-fogra-29);}
+
+
+.itext-box>.login-itext
+{
+    color: var(--eggshell);
+    box-shadow: -5px 0 5px -5px var(--rich-black-fogra-29);
+    background-color: var(--black-coral);
+}
+
+.itext-box>.itext-label
+{
+    color: var(--black-coral);
+    background-color: var(--eggshell);
+}
+
+.itext-box>.itext-label::after
+{background-color:var(--eggshell);}
+

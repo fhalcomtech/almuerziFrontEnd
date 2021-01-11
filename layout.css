@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+
+*, *::before, *::after
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --rich-black-fogra-29: hsla(222, 43%, 9%, 1);
+    --rich-black-fogra-29-95: hsla(222, 43%, 9%, 0.95);
+    --prussian-blue: hsla(215, 40%, 19%, 1);
+    --black-coral: hsla(208, 31%, 35%, 1);
+    --shadow-blue: hsla(214, 25%, 56%, 1);
+    --eggshell: hsla(47, 44%, 89%, 1);
+    --roboto: 'Roboto', sans-serif;
+    --yanone: 'Yanone Kaffeesatz', sans-serif;
+    --pilosopher: 'Philosopher', sans-serif;
+    --sapphire-blue: hsla(201, 100%, 33%, 1);
+    --dodger-blue: hsla(205, 100%, 51%, 1);
+    --maximum-yellow-red: hsla(39, 100%, 63%, 1);
+    --ruby: hsla(338, 85%, 46%, 1);
+    --quinacridone-magenta: hsla(335, 52%, 37%, 1);
+    --ligth-background: #F8F7FC;
+    --dark-background:hsl(240, 21%, 89%);
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.simple-list.simple-list-container
+{margin-top: 1rem;}
+
+.simple-list.simple-list-container
+{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 300px;
+    min-width: 100px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.simple-list > .simple-list-title
+{
+    font-family: var(--pilosopher);
+    font-size: 1.5rem;
+    display: flex;
+    padding: 0.5rem;
+    width: 100%;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.simple-list > .simple-list-title.rounded
+{
+    border-radius: 2.5rem;
+}
+
+.simple-list > .simple-list-ul
+{
+    margin: 1rem;
+    list-style: none;
+}
+
+.simple-list > .simple-list-ul.rounded
+{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.simple-list > .simple-list-ul > li
+{
+    display: block;
+    background-color: var(--rich-black-fogra-29);
+    padding: 0.5rem 1rem ;   
+    border-bottom: none;
+    cursor: pointer;
+}
+
+
+.simple-list > .simple-list-ul > li.selected
+{
+    font-weight: 700;
+}
+
+.simple-list > .simple-list-ul > li.row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.simple-list > .simple-list-ul > li.row > .column
+{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+
+.btn
+{
+    
+    border: none;
+    font-size: 1.10rem;
+    font-weight: 300;
+    padding: .5rem .75rem;
+    width: max-content;
+    align-self: center;
+    margin: 1em;
+   
+}
+
+
+.btn.rounded
+{
+    border-radius: 2rem;
+}
+
+.btn.large
+{
+  width: 100%;
+  margin: 0;
+}
+
+.btn.disabled, .btn:hover
+{font-weight: 400;}
+
+
+.loader
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+.loader.hide
+{
+    display: none;
+}
+
+.login
+{
+    width: 250px;
+    height: 300px;
+    justify-self: center;
+    align-self: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login.rounded
+{
+    border-radius: 1rem;
+}
+
+.login-title
+{
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.login-form
+{
+    width: 90%;
+    height: 80%;
+}
+
+.login-itext
+{
+    width: 100%;
+    height: 2.25em;
+    border: none;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.login-itext.rounded
+{
+    border-radius: 2em;
+}
+
+.login>.btn
+{
+    height: 2.2rem;
+}
+
+.itext-box
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.itext-box>.login-itext
+{
+    height: 2.5rem;
+    z-index: 1;
+
+}
+
+.itext-box>.itext-label
+{
+    font-weight: 400;
+    height: 2.5rem;
+    width: fit-content;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+
+.itext-box>.itext-label::after
+{
+   
+    
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    left: 1.25rem;
+    z-index: -1;
+}
+
+
+
+.itext-box>.itext-label.rounded
+{
+    border-radius: 1.25rem;
+}
+
